@@ -1,0 +1,17 @@
+bin/
+obj/
+.settings/
+Help/
+TestResults/
+*.Cache
+js/*.ht*
+js/DecTest.*
+ProfilingSessions/
+.project
+.classpath
+*.shf*
+*.Settings
+*.class
+*.suo
+*.log
+.pmd
