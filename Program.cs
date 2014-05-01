@@ -10,34 +10,33 @@ using System.Text;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Enriched
-{
+namespace Enriched {
   class EnrichedText
   {
     private static string ParseColor(string str, int index, int endIndex) {
       int indexTemp = index;
-      if (index + 2 < endIndex && (str[index] & ~32) == 82 && (str[index + 1] & ~32) == 69 && (str[index + 2] & ~32) == 68) {
+      if (index + 2 == endIndex-1 && (str[index] & ~32) == 82 && (str[index + 1] & ~32) == 69 && (str[index + 2] & ~32) == 68) {
         return str.Substring(index, endIndex-index);
       }
-      if (index + 3 < endIndex && (str[index] & ~32) == 66 && (str[index + 1] & ~32) == 76 && (str[index + 2] & ~32) == 85 && (str[index + 3] & ~32) == 69) {
+      if (index + 3 == endIndex-1 && (str[index] & ~32) == 66 && (str[index + 1] & ~32) == 76 && (str[index + 2] & ~32) == 85 && (str[index + 3] & ~32) == 69) {
         return str.Substring(index, endIndex-index);
       }
-      if (index + 4 < endIndex && (str[index] & ~32) == 71 && (str[index + 1] & ~32) == 82 && (str[index + 2] & ~32) == 69 && (str[index + 3] & ~32) == 69 && (str[index + 4] & ~32) == 78) {
+      if (index + 4== endIndex - 1 && (str[index] & ~32) == 71 && (str[index + 1] & ~32) == 82 && (str[index + 2] & ~32) == 69 && (str[index + 3] & ~32) == 69 && (str[index + 4] & ~32) == 78) {
         return str.Substring(index, endIndex-index);
       }
-      if (index + 5 < endIndex && (str[index] & ~32) == 89 && (str[index + 1] & ~32) == 69 && (str[index + 2] & ~32) == 76 && (str[index + 3] & ~32) == 76 && (str[index + 4] & ~32) == 79 && (str[index + 5] & ~32) == 87) {
+      if (index + 5== endIndex - 1 && (str[index] & ~32) == 89 && (str[index + 1] & ~32) == 69 && (str[index + 2] & ~32) == 76 && (str[index + 3] & ~32) == 76 && (str[index + 4] & ~32) == 79 && (str[index + 5] & ~32) == 87) {
         return str.Substring(index, endIndex-index);
       }
-      if (index + 3 < endIndex && (str[index] & ~32) == 67 && (str[index + 1] & ~32) == 89 && (str[index + 2] & ~32) == 65 && (str[index + 3] & ~32) == 78) {
+      if (index + 3== endIndex - 1 && (str[index] & ~32) == 67 && (str[index + 1] & ~32) == 89 && (str[index + 2] & ~32) == 65 && (str[index + 3] & ~32) == 78) {
         return str.Substring(index, endIndex-index);
       }
-      if (index + 6 < endIndex && (str[index] & ~32) == 77 && (str[index + 1] & ~32) == 65 && (str[index + 2] & ~32) == 71 && (str[index + 3] & ~32) == 69 && (str[index + 4] & ~32) == 78 && (str[index + 5] & ~32) == 84 && (str[index + 6] & ~32) == 65) {
+      if (index + 6== endIndex - 1 && (str[index] & ~32) == 77 && (str[index + 1] & ~32) == 65 && (str[index + 2] & ~32) == 71 && (str[index + 3] & ~32) == 69 && (str[index + 4] & ~32) == 78 && (str[index + 5] & ~32) == 84 && (str[index + 6] & ~32) == 65) {
         return str.Substring(index, endIndex-index);
       }
-      if (index + 4 < endIndex && (str[index] & ~32) == 66 && (str[index + 1] & ~32) == 76 && (str[index + 2] & ~32) == 65 && (str[index + 3] & ~32) == 67 && (str[index + 4] & ~32) == 75) {
+      if (index + 4== endIndex - 1 && (str[index] & ~32) == 66 && (str[index + 1] & ~32) == 76 && (str[index + 2] & ~32) == 65 && (str[index + 3] & ~32) == 67 && (str[index + 4] & ~32) == 75) {
         return str.Substring(index, endIndex-index);
       }
-      if (index + 4 < endIndex && (str[index] & ~32) == 87 && (str[index + 1] & ~32) == 72 && (str[index + 2] & ~32) == 73 && (str[index + 3] & ~32) == 84 && (str[index + 4] & ~32) == 69) {
+      if (index + 4== endIndex - 1 && (str[index] & ~32) == 87 && (str[index + 1] & ~32) == 72 && (str[index + 2] & ~32) == 73 && (str[index + 3] & ~32) == 84 && (str[index + 4] & ~32) == 69) {
         return str.Substring(index, endIndex-index);
       }
       int indexTemp2 = index;
@@ -53,7 +52,7 @@ namespace Enriched
         } else {
           return null;
         }
-        if (index + 4 < endIndex && (str[index] == 44) && (((str[index + 1] >= 65 && str[index + 1] <= 70) || (str[index + 1] >= 97 && str[index + 1] <= 102) || (str[index + 1] >= 48 && str[index + 1] <= 57)) && ((str[index + 2] >= 65 && str[index + 2] <= 70) || (str[index + 2] >= 97 && str[index + 2] <= 102) || (str[index + 2] >= 48 && str[index + 2] <= 57)) && ((str[index + 3] >= 65 && str[index + 3] <= 70) || (str[index + 3] >= 97 && str[index + 3] <= 102) || (str[index + 3] >= 48 && str[index + 3] <= 57)) && ((str[index + 4] >= 65 && str[index + 4] <= 70) || (str[index + 4] >= 97 && str[index + 4] <= 102) || (str[index + 4] >= 48 && str[index + 4] <= 57)))) {
+        if (index + 4== endIndex - 1 && (str[index] == 44) && (((str[index + 1] >= 65 && str[index + 1] <= 70) || (str[index + 1] >= 97 && str[index + 1] <= 102) || (str[index + 1] >= 48 && str[index + 1] <= 57)) && ((str[index + 2] >= 65 && str[index + 2] <= 70) || (str[index + 2] >= 97 && str[index + 2] <= 102) || (str[index + 2] >= 48 && str[index + 2] <= 57)) && ((str[index + 3] >= 65 && str[index + 3] <= 70) || (str[index + 3] >= 97 && str[index + 3] <= 102) || (str[index + 3] >= 48 && str[index + 3] <= 57)) && ((str[index + 4] >= 65 && str[index + 4] <= 70) || (str[index + 4] >= 97 && str[index + 4] <= 102) || (str[index + 4] >= 48 && str[index + 4] <= 57)))) {
           index+=5;
         } else {
           return null;
@@ -87,8 +86,8 @@ namespace Enriched
           if (indexTemp2 != index) {
             index = indexTemp2;
           } else {
- break;
-}
+            break;
+          }
         }
         indexTemp = index;
       } while (false);
@@ -103,12 +102,12 @@ namespace Enriched
 
     private static string[] SplitAt(string s, string delimiter) {
       if (delimiter == null ||
-         delimiter.Length == 0) {
- throw new ArgumentException();
-}
+          delimiter.Length == 0) {
+        throw new ArgumentException();
+      }
       if (s == null || s.Length == 0) {
- return new string[] { ""};
-}
+        return new string[] { ""};
+      }
       int index = 0;
       bool first = true;
       List<string> strings = null;
@@ -117,8 +116,8 @@ namespace Enriched
         int index2 = s.IndexOf(delimiter, index, StringComparison.Ordinal);
         if (index2< 0) {
           if (first) {
- return new string[] { s};
-}
+            return new string[] { s};
+          }
           strings.Add(s.Substring(index));
           break;
         } else {
@@ -136,8 +135,8 @@ namespace Enriched
 
     private static string TrimSpaces(string s) {
       if (s == null || s.Length == 0) {
- return s;
-}
+        return s;
+      }
       int index = 0;
       int sLength = s.Length;
       while (index<sLength) {
@@ -148,15 +147,15 @@ namespace Enriched
         ++index;
       }
       if (index == sLength) {
- return "";
-}
+        return "";
+      }
       int startIndex = index;
       index = sLength-1;
       while (index >= 0) {
         char c = s[index];
         if (c != 0x09 && c != 0x0a && c != 0x0c && c != 0x0d && c != 0x20) {
- return s.Substring(startIndex, (index + 1)-(startIndex));
-}
+          return s.Substring(startIndex, (index + 1)-(startIndex));
+        }
         --index;
       }
       return "";
@@ -205,22 +204,22 @@ namespace Enriched
                 } else if (i3< 1) {
                   index = indexStart3; break;
                 } else {
- break;
-}
+                  break;
+                }
               }
               if (index == indexStart3) {
- break;
-}
+                break;
+              }
               int commandEnd = index;
               if (index < endIndex && (str[index] == 62)) {
                 index+=1;
                 string command = str.Substring(commandStart, commandEnd-commandStart).ToLowerInvariant();
                 if (command.Equals("nofill")) {
-                    if (isEndTag && nofillDepth>0) {
-                      --nofillDepth;
-                    } else if (!isEndTag) {
-                      ++nofillDepth;
-                    }
+                  if (isEndTag && nofillDepth>0) {
+                    --nofillDepth;
+                  } else if (!isEndTag) {
+                    ++nofillDepth;
+                  }
                 }
                 bool wasWithinParam = withinParam;
                 if (command.Equals("param")) {
@@ -263,8 +262,8 @@ namespace Enriched
                 lineBreakCount = i2;
                 break;
               } else {
- index = indexTemp3;
-}
+                index = indexTemp3;
+              }
             }
             index = indexStart2;
             if (indexTemp3 != indexStart2) {
@@ -329,8 +328,8 @@ namespace Enriched
           if (indexTemp2 != index) {
             index = indexTemp2;
           } else {
- break;
-}
+            break;
+          }
         }
         indexTemp = index;
       } while (false);
@@ -382,12 +381,12 @@ namespace Enriched
                 } else if (i3< 1) {
                   index = indexStart3; break;
                 } else {
- break;
-}
+                  break;
+                }
               }
               if (index == indexStart3) {
- break;
-}
+                break;
+              }
               int commandEnd = index;
               if (index < endIndex && (str[index] == 62)) {
                 index+=1;
@@ -396,14 +395,14 @@ namespace Enriched
                   if (command.Equals("bold")) {
                     currentBuilder.Append('<');
                     if (isEndTag) {
- currentBuilder.Append('/');
-}
+                      currentBuilder.Append('/');
+                    }
                     currentBuilder.Append("b>");
                   } else if (command.Equals("italic")) {
                     currentBuilder.Append('<');
                     if (isEndTag) {
- currentBuilder.Append('/');
-}
+                      currentBuilder.Append('/');
+                    }
                     currentBuilder.Append("i>");
                   } else if (command.Equals("fixed")) {
                     if (isEndTag) {
@@ -540,8 +539,8 @@ namespace Enriched
                 if (withinParam && wasWithinParam) {
                   currentBuilder.Append("<");
                   if (isEndTag) {
- currentBuilder.Append('/');
-}
+                    currentBuilder.Append('/');
+                  }
                   currentBuilder.Append(command);
                   currentBuilder.Append(">");
                 }
@@ -573,8 +572,8 @@ namespace Enriched
                 lineBreakCount = i2;
                 break;
               } else {
- index = indexTemp3;
-}
+                index = indexTemp3;
+              }
             }
             index = indexStart2;
             if (indexTemp3 != indexStart2) {
@@ -642,8 +641,8 @@ namespace Enriched
           if (indexTemp2 != index) {
             index = indexTemp2;
           } else {
- break;
-}
+            break;
+          }
         }
         indexTemp = index;
       } while (false);
