@@ -101,8 +101,8 @@ namespace Enriched {
         } else {
           return null;
         }
-        return "#
-  "+str.Substring(index,2)+str.Substring(index+5,2)+str.Substring(index,10);
+        string ret="#";
+        return ret+str.Substring(index,2)+str.Substring(index+5,2)+str.Substring(index,10);
       }
     }
 
@@ -401,9 +401,9 @@ namespace Enriched {
       StringBuilder currentBuilder = originalBuilder;
       bool withinParam = false;
       int nofillDepth = 0;
-      originalBuilder.Append("<!DOCTYPE html><html><title>Untitled</title>"+
-            "<style>p { margin-bottom: 0em; margin-top: 0em; }</style><body>
-                              ");
+      originalBuilder.Append("<!DOCTYPE html><html><title>Untitled</title>");
+      originalBuilder.Append("<style>p { margin-bottom: 0em; margin-top: 0em; }");
+      originalBuilder.Append("</style><body>");
       string lastCommand = String.Empty;
       do {
         while (true) {
@@ -464,8 +464,8 @@ namespace Enriched {
                     if (isEndTag) {
                       currentBuilder.Append("</span>");
                     } else {
-                currentBuilder.Append("<span style='font-family:monospaced'>
-                        ");
+                currentBuilder.Append("<span style='font-family:");
+                      currentBuilder.Append("monospaced'>");
                     }
                   } else if (command.Equals("center")) {
                     if (isEndTag) {
@@ -580,13 +580,13 @@ namespace Enriched {
                         } else if (!inFlag && pItem2.Equals("in")) {
                           styleBuilder.Append("text-indent: 2em;");
                         } else if (!outFlag && pItem2.Equals("out")) {
-                   styleBuilder.Append("text-indent: -2em; margin-left: 2em;
-                            ");
+                   styleBuilder.Append("text-indent: -2em;");
+                          styleBuilder.Append("margin-left: 2em;");
                         }
                       }
                       if (!inFlag && !outFlag) {
-                      styleBuilder.Append("padding-top:0; padding-bottom: 0;
-                          ");
+                   styleBuilder.Append("padding-top:0;");
+                          styleBuilder.Append("padding-bottom: 0;");
                       }
             currentBuilder.Append("<div style=' "+styleBuilder.ToString()+
                         "'> ");
