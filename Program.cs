@@ -102,7 +102,8 @@ namespace Enriched {
           return null;
         }
         string ret="#";
-        return ret+str.Substring(index,2)+str.Substring(index+5,2)+str.Substring(index,10);
+        return
+  ret + str.Substring(index, 2)+str.Substring(index + 5, 2)+str.Substring(index, 10);
       }
     }
 
@@ -402,7 +403,7 @@ namespace Enriched {
       bool withinParam = false;
       int nofillDepth = 0;
       originalBuilder.Append("<!DOCTYPE html><html><title>Untitled</title>");
-      originalBuilder.Append("<style>p { margin-bottom: 0em; margin-top: 0em; }");
+   originalBuilder.Append("<style>p { margin-bottom: 0em; margin-top: 0em; }");
       originalBuilder.Append("</style><body>");
       string lastCommand = String.Empty;
       do {
