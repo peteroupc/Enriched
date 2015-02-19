@@ -3,7 +3,7 @@ Written by Peter O. in 2014.
 Any copyright is dedicated to the Public Domain.
 http://creativecommons.org/publicdomain/zero/1.0/
 If you like this, you should donate to Peter O.
-at: http://upokecenter.com/d/
+at: http://upokecenter.dreamhosters.com/articles/donate-now-2/
  */
 using System;
 using System.Text;
@@ -11,8 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 
 namespace Enriched {
-  class EnrichedText
-  {
+  class EnrichedText {
     private static string ParseColor(string str, int index, int endIndex) {
       int indexTemp = index;
       if (index + 2 == endIndex-1 && (str[index] & ~32) == 82 && (str[index+
@@ -20,7 +19,8 @@ namespace Enriched {
         return str.Substring(index, endIndex-index);
       }
       if (index + 3 == endIndex-1 && (str[index] & ~32) == 66 && (str[index+
-      1] & ~32) == 76 && (str[index + 2] & ~32) == 85 && (str[index + 3] & ~32) == 69) {
+      1] & ~32) == 76 && (str[index + 2] & ~32) == 85 && (str[index + 3] & ~32)
+        == 69) {
         return str.Substring(index, endIndex-index);
       }
       if (index + 4 == endIndex - 1 && (str[index] & ~32) == 71 &&
@@ -155,8 +155,7 @@ namespace Enriched {
     }
 
     private static string[] SplitAt(string s, string delimiter) {
-      if (delimiter == null ||
-          delimiter.Length == 0) {
+      if (delimiter == null || delimiter.Length == 0) {
         throw new ArgumentException();
       }
       if (s == null || s.Length == 0) {
@@ -404,7 +403,7 @@ namespace Enriched {
       int nofillDepth = 0;
       originalBuilder.Append("<!DOCTYPE html><html><title>Untitled</title>"+
             "<style>p { margin-bottom: 0em; margin-top: 0em; }</style><body>
-                               ");
+                              ");
       string lastCommand = String.Empty;
       do {
         while (true) {
