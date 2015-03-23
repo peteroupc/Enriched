@@ -103,7 +103,8 @@ namespace Enriched {
         }
         string ret="#";
         return
-  ret + str.Substring(index, 2)+str.Substring(index + 5, 2)+str.Substring(index, 10);
+  ret + str.Substring(index, 2)+str.Substring(index + 5, 2)+str.Substring(index,
+    10);
       }
     }
 
