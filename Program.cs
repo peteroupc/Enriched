@@ -727,17 +727,19 @@ namespace Enriched {
 
     public static string ReadTextFromFile(string filename) {
       using (var stream = new FileStream(filename, FileMode.Open)) {
-        var reader = new CharacterReader(stream);
+        var reader = new CharacterReader(stream, 2);
         var builder = new StringBuilder();
         while (true) {
-          int c = reader.NextChar();
+          int c = reader.ReadChar();
           if (c < 0) {
  break;
 }
-          if (c <= 0xffff) { builder.Append((char)(c));
+          if (c <= 0xffff) {
+  { builder.Append((char)(c));
+}
   } else if (c <= 0x10ffff) {
 builder.Append((char)((((c-0x10000) >> 10) & 0x3ff)+0xd800));
-builder.Append((char)((((c-0x10000)) & 0x3ff)+0xdc00));
+builder.Append((char)(((c-0x10000) & 0x3ff)+0xdc00));
 }
         }
         return builder.ToString();
@@ -751,8 +753,7 @@ builder.Append((char)((((c-0x10000)) & 0x3ff)+0xdc00));
               "Supports files encoded in UTF-8, UTF-16, or UTF-32. Files" +
                 Environment.NewLine +
               "that use the latter two encodings should have a byte-order" +
-                Environment.NewLine +
-              "mark at the beginning.");
+                Environment.NewLine + "mark at the beginning.");
         return;
       }
       string input = args[0];
