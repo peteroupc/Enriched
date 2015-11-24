@@ -166,8 +166,8 @@ namespace Enriched {
       if (s == null || s.Length == 0) {
         return new string[] { "" };
       }
-      int index = 0;
-      bool first = true;
+      var index = 0;
+      var first = true;
       List<string> strings = null;
       int delimLength = delimiter.Length;
       while (true) {
@@ -195,7 +195,7 @@ namespace Enriched {
       if (s == null || s.Length == 0) {
         return s;
       }
-      int index = 0;
+      var index = 0;
       int sLength = s.Length;
       while (index < sLength) {
         char c = s[index];
@@ -224,8 +224,8 @@ namespace Enriched {
       var originalBuilder = new StringBuilder();
       var paramBuilder = new StringBuilder();
       StringBuilder currentBuilder = originalBuilder;
-      bool withinParam = false;
-      int nofillDepth = 0;
+      var withinParam = false;
+      var nofillDepth = 0;
       string lastCommand = String.Empty;
       do {
         while (true) {
@@ -244,7 +244,7 @@ namespace Enriched {
               } else {
                 break;
               }
-              bool isEndTag = false;
+              var isEndTag = false;
               if (index < endIndex && (str[index] == 47)) {
                 ++index;
                 isEndTag = true;
@@ -299,7 +299,7 @@ namespace Enriched {
               indexTemp2 = indexTemp3; break;
             }
             int indexStart2 = index;
-            int lineBreakCount = 0;
+            var lineBreakCount = 0;
             for (int i2 = 0; ; ++i2) {
               indexTemp3 = index;
               do {
@@ -336,7 +336,7 @@ namespace Enriched {
                   if (lineBreakCount == 2) {
                     currentBuilder.Append("\r\n");
                   } else {
-                    int j = 0;
+                    var j = 0;
                     for (j = 1; j < lineBreakCount; ++j) {
                     currentBuilder.Append("\r\n");
                     }
@@ -404,8 +404,8 @@ namespace Enriched {
       var originalBuilder = new StringBuilder();
       var paramBuilder = new StringBuilder();
       StringBuilder currentBuilder = originalBuilder;
-      bool withinParam = false;
-      int nofillDepth = 0;
+      var withinParam = false;
+      var nofillDepth = 0;
       originalBuilder.Append("<!DOCTYPE html><html><title>Untitled</title>");
    originalBuilder.Append("<style>p { margin-bottom: 0em; margin-top: 0em; }");
       originalBuilder.Append("</style><body>");
@@ -427,7 +427,7 @@ namespace Enriched {
               } else {
                 break;
               }
-              bool isEndTag = false;
+              var isEndTag = false;
               if (index < endIndex && (str[index] == 47)) {
                 ++index;
                 isEndTag = true;
@@ -571,10 +571,10 @@ namespace Enriched {
                     } else if (lastCommand.Equals("paraindent")) {
                     p = p.ToLowerInvariant();
                     string[] pList = SplitAt(p, ",");
-                    bool leftFlag = false;
-                    bool rightFlag = false;
-                    bool inFlag = false;
-                    bool outFlag = false;
+                    var leftFlag = false;
+                    var rightFlag = false;
+                    var inFlag = false;
+                    var outFlag = false;
                     var styleBuilder = new StringBuilder();
                     foreach (string pItem in pList) {
                     string pItem2 = TrimSpaces(pItem);
@@ -621,7 +621,7 @@ namespace Enriched {
               indexTemp2 = indexTemp3; break;
             }
             int indexStart2 = index;
-            int lineBreakCount = 0;
+            var lineBreakCount = 0;
             for (int i2 = 0; ; ++i2) {
               indexTemp3 = index;
               do {
@@ -658,7 +658,7 @@ namespace Enriched {
                   if (lineBreakCount == 2) {
                     currentBuilder.Append("<br>");
                   } else {
-                    int j = 0;
+                    var j = 0;
                     currentBuilder.Append("<p>");
                     for (j = 2; j < lineBreakCount; ++j) {
                     currentBuilder.Append("<br>");
