@@ -10,7 +10,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.IO;
 
-using PeterO.Cbor;
+using PeterO.Text;
 
 namespace Enriched {
   class EnrichedText {
@@ -727,22 +727,7 @@ namespace Enriched {
 
     public static string ReadTextFromFile(string filename) {
       using (var stream = new FileStream(filename, FileMode.Open)) {
-        var reader = new CharacterReader(stream, 2);
-        var builder = new StringBuilder();
-        while (true) {
-          int c = reader.ReadChar();
-          if (c < 0) {
- break;
-}
-          if (c <= 0xffff) {
-  { builder.Append((char)(c));
-}
-  } else if (c <= 0x10ffff) {
-builder.Append((char)((((c-0x10000) >> 10) & 0x3ff)+0xd800));
-builder.Append((char)(((c-0x10000) & 0x3ff)+0xdc00));
-}
-        }
-        return builder.ToString();
+        return new CharacterReader(stream, 2).InputToString();
       }
     }
 
