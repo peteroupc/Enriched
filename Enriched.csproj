@@ -7,8 +7,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Enriched</RootNamespace>
     <AssemblyName>Enriched</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
@@ -42,6 +41,7 @@
     </Reference>
     <Reference Include="Encoding">
       <HintPath>packages\PeterO.Encoding.0.1.0\lib\portable-net40+sl50+win+wpa81+wp8\Encoding.dll</HintPath>
+      <HintPath>packages\PeterO.Encoding.0.1.0\lib\portable-net40+sl50+win+wpa81+wp8\Encoding.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="EnrichedText\EnrichedText.csproj">
+      <Project>{E943127A-F8A6-4885-BC52-AE16AA61A7CA}</Project>
+      <Name>EnrichedText</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
