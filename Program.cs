@@ -15,7 +15,7 @@ namespace Enriched {
     class Program {
         public static string ReadTextFromFile (string filename) {
             using (var stream = new FileStream (filename, FileMode.Open)) {
-                return new CharacterReader (stream, 2).InputToString ();
+                return new CharacterReader (stream, 2).InputToString();
             }
         }
 

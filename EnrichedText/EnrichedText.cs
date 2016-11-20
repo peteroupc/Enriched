@@ -50,52 +50,39 @@ namespace PeterO.Enriched {
             }
             {
          if (index + 3 < endIndex && (((str [index] >= 65 && str [index] <=
-                  70)
-                    ||
+                70) ||
                 (str [index] >= 97 && str [index] <= 102) || (str [index] >=
-                      48
-                    &&
+                48 &&
               str [index] <= 57)) && ((str [index + 1] >= 65 && str [index +
-                      1]
-                    <=
+                1] <=
                 70) || (str [index + 1] >= 97 && str [index + 1] <= 102) || (str
                     [index +
                  1] >= 48 && str [index + 1] <= 57)) && ((str [index + 2] >=
-                      65
-                    &&
+                65 &&
             str [index + 2] <= 70) || (str [index + 2] >= 97 && str [index +
-                     2]
-                <= 102) || (str [index + 2] >= 48 && str [index + 2] <= 57))
-                      &&
-             ((str [index + 3] >= 65 && str [index + 3] <= 70) || (str
-                      [index +
-               3] >= 97 && str [index + 3] <= 102) || (str [index + 3] >= 48
-                      &&
-                    str [index + 3] <= 57)))) {
+              2] <= 102) || (str [index + 2] >= 48 && str [index + 2] <=
+                57))&& ((str [index + 3] >= 65 && str [index + 3] <= 70) || (str
+                    [index +
+               3] >= 97 && str [index + 3] <= 102) || (str [index + 3] >= 48&&
+                str [index + 3] <= 57)))) {
                     index += 4;
                 } else {
                     return null;
                 }
              if (index + 4 < endIndex && (str [index] == 44) && (((str
-                  [index +
-                    1]
+                [index + 1]
             >= 65 && str [index + 1] <= 70) || (str [index + 1] >= 97 && str
                     [index +
                 1] <= 102) || (str [index + 1] >= 48 && str [index + 1] <=
-                     57))
-                    &&
+                57)) &&
              ((str [index + 2] >= 65 && str [index + 2] <= 70) || (str
                   [index +
-               2] >= 97 && str [index + 2] <= 102) || (str [index + 2] >= 48
-                      &&
-             str [index + 2] <= 57)) && ((str [index + 3] >= 65 && str
-                  [index +
-                    3]
-                 <= 70) || (str [index + 3] >= 97 && str [index + 3] <= 102)
-                      ||
-            (str [index + 3] >= 48 && str [index + 3] <= 57)) && ((str
-                 [index +
-                    4]
+               2] >= 97 && str [index + 2] <= 102) || (str [index + 2] >= 48&&
+                str [index + 2] <= 57)) && ((str [index + 3] >= 65 && str
+                [index + 3]
+                 <= 70) || (str [index + 3] >= 97 && str [index + 3] <= 102)||
+                (str [index + 3] >= 48 && str [index + 3] <= 57)) && ((str
+                [index + 4]
             >= 65 && str [index + 4] <= 70) || (str [index + 4] >= 97 && str
                     [index +
                   4] <= 102) || (str [index + 4] >= 48 && str [index + 4] <=
@@ -107,25 +94,19 @@ namespace PeterO.Enriched {
                 if (index + 4 == endIndex - 1 && (str [index] == 44) && (((str
                     [index +
                 1] >= 65 && str [index + 1] <= 70) || (str [index + 1] >= 97
-                      &&
+                    &&
            str [index + 1] <= 102) || (str [index + 1] >= 48 && str [index +
-                  1]
-                <= 57)) && ((str [index + 2] >= 65 && str [index + 2] <= 70)
-                      ||
-             (str [index + 2] >= 97 && str [index + 2] <= 102) || (str
-                    [index +
-                    2]
+              1] <= 57)) && ((str [index + 2] >= 65 && str [index + 2] <=
+                70)|| (str [index + 2] >= 97 && str [index + 2] <= 102) || (str
+                [index + 2]
                  >= 48 && str [index + 2] <= 57)) && ((str [index + 3] >= 65
-                      &&
+                    &&
             str [index + 3] <= 70) || (str [index + 3] >= 97 && str [index +
-                   3]
-                <= 102) || (str [index + 3] >= 48 && str [index + 3] <= 57))
-                      &&
-             ((str [index + 4] >= 65 && str [index + 4] <= 70) || (str
+              3] <= 102) || (str [index + 3] >= 48 && str [index + 3] <=
+                57))&& ((str [index + 4] >= 65 && str [index + 4] <= 70) || (str
                     [index +
-               4] >= 97 && str [index + 4] <= 102) || (str [index + 4] >= 48
-                      &&
-                    str [index + 4] <= 57)))) {
+               4] >= 97 && str [index + 4] <= 102) || (str [index + 4] >= 48&&
+                str [index + 4] <= 57)))) {
                     index += 5;
                 } else {
                     return null;
@@ -145,23 +126,19 @@ namespace PeterO.Enriched {
                     int indexTemp2 = index;
                     do {
               if (index < endIndex && ((str [index] >= 48 && str [index] <=
-                      57)
-                    ||
-             (str [index] >= 44 && str [index] <= 45) || (str [index] == 32)
-                      ||
-                  (str [index] >= 12 && str [index] <= 13) || (str [index]
-                      >= 9
-                    &&
-             str [index] <= 10) || (str [index] >= 97 && str [index] <= 122)
-                      ||
-                    (str [index] >= 65 && str [index] <= 90))) {
+                57) ||
+             (str [index] >= 44 && str [index] <= 45) || (str [index] == 32)||
+                (str [index] >= 12 && str [index] <= 13) || (str [index]
+                >= 9 &&
+             str [index] <= 10) || (str [index] >= 97 && str [index] <= 122)||
+                (str [index] >= 65 && str [index] <= 90))) {
                     ++indexTemp2; break;
                     }
                     int indexTemp3 = index;
                     do {
                     if (index < endIndex && ((str [index] >= 128 && str [index]
                 <= 55295) || (str [index] >= 57344 && str [index] <=
-                      65535))) {
+                    65535))) {
                     ++indexTemp3; break;
                     }
                     if (index + 1 < endIndex && ((str [index] >= 55296 &&
@@ -187,8 +164,7 @@ namespace PeterO.Enriched {
         private static int SkipLang (string str, int index, int endIndex) {
             while (index < endIndex && ((str [index] >= 48 && str [index] <= 57)
                   ||
-            (str [index] == 45) || (str [index] >= 97 && str [index] <= 122)
-                  ||
+            (str [index] == 45) || (str [index] >= 97 && str [index] <= 122)||
                 (str [index] >= 65 && str [index] <= 90))) {
                 ++index;
             }
@@ -197,7 +173,7 @@ namespace PeterO.Enriched {
 
         private static string [] SplitAt (string s, string delimiter) {
             if (delimiter == null || delimiter.Length == 0) {
-                throw new ArgumentException ();
+                throw new ArgumentException();
             }
             if (s == null || s.Length == 0) {
                 return new string [] { "" };
@@ -217,7 +193,7 @@ namespace PeterO.Enriched {
                     break;
                 } else {
                     if (first) {
-                    strings = new List<string> ();
+                    strings = new List<string>();
                     first = false;
                     }
                     string newstr = s.Substring (index, (index2) - (index));
@@ -225,7 +201,7 @@ namespace PeterO.Enriched {
                     index = index2 + delimLength;
                 }
             }
-            return strings.ToArray ();
+            return strings.ToArray();
         }
 
         private static string TrimSpaces (string s) {
@@ -260,8 +236,8 @@ namespace PeterO.Enriched {
 
         public static string EnrichedToPlain (string str, int index, int
              endIndex) {
-            var originalBuilder = new StringBuilder ();
-            var paramBuilder = new StringBuilder ();
+            var originalBuilder = new StringBuilder();
+            var paramBuilder = new StringBuilder();
             StringBuilder currentBuilder = originalBuilder;
             var withinParam = false;
             var nofillDepth = 0;
@@ -270,8 +246,7 @@ namespace PeterO.Enriched {
                     int indexTemp2 = index;
                     do {
                   if (index + 1 < endIndex && str [index] == 60 && str
-                      [index +
-                    1] == 60) {
+                [index + 1] == 60) {
                     currentBuilder.Append ("<");
                     indexTemp2 += 2; break;
                     }
@@ -293,7 +268,7 @@ namespace PeterO.Enriched {
                     if (index < endIndex && ((str [index] >= 48 && str [index]
                     <= 57) || (str [index] == 45) || (str [index] >= 97 && str
                 [index] <= 122) || (str [index] >= 65 && str [index] <=
-                      90))) {
+                    90))) {
                     ++index;
                     } else if (i3 < 1) {
                     index = indexStart3; break;
@@ -308,7 +283,7 @@ namespace PeterO.Enriched {
                     if (index < endIndex && (str [index] == 62)) {
                     ++index;
                     string command = str.Substring (commandStart,
-                    commandEnd - commandStart).ToLowerInvariant ();
+                    commandEnd - commandStart).ToLowerInvariant();
                     if (command.Equals ("nofill")) {
                     if (isEndTag && nofillDepth > 0) {
                     --nofillDepth;
@@ -387,11 +362,9 @@ namespace PeterO.Enriched {
                     break;
                     }
                 if (index < endIndex && ((str [index] >= 0 && str [index] <=
-                      9)
-                    ||
-              (str [index] >= 11 && str [index] <= 12) || (str [index] >= 14
-                      &&
-                    str [index] <= 127))) {
+                9) ||
+              (str [index] >= 11 && str [index] <= 12) || (str [index] >= 14&&
+                str [index] <= 127))) {
                     // Ordinary character
                     if (str [index] == 0) {
                     // Null
@@ -405,7 +378,7 @@ namespace PeterO.Enriched {
                     do {
                     if (index < endIndex && ((str [index] >= 128 && str [index]
                 <= 55295) || (str [index] >= 57344 && str [index] <=
-                      65535))) {
+                    65535))) {
                     // BMP character
                     currentBuilder.Append (str [index]);
                     ++indexTemp3; break;
@@ -436,20 +409,18 @@ namespace PeterO.Enriched {
                     }
                 }
             } while (false);
-            return originalBuilder.ToString ();
+            return originalBuilder.ToString();
         }
 
         public static string EnrichedToHtml (string str, int index, int
             endIndex) {
-            var originalBuilder = new StringBuilder ();
-            var paramBuilder = new StringBuilder ();
+            var originalBuilder = new StringBuilder();
+            var paramBuilder = new StringBuilder();
             StringBuilder currentBuilder = originalBuilder;
             var withinParam = false;
             var nofillDepth = 0;
-       originalBuilder.Append
-              ("<!DOCTYPE html><html><title>Untitled</title>");
-  originalBuilder.Append
-              ("<style>p { margin-bottom: 0em; margin-top: 0em; }");
+       originalBuilder.Append ("<!DOCTYPE html><html><title>Untitled</title>");
+  originalBuilder.Append ("<style>p { margin-bottom: 0em; margin-top: 0em; }");
             originalBuilder.Append ("</style><body>");
             string lastCommand = String.Empty;
             do {
@@ -457,8 +428,7 @@ namespace PeterO.Enriched {
                     int indexTemp2 = index;
                     do {
                   if (index + 1 < endIndex && str [index] == 60 && str
-                      [index +
-                    1] == 60) {
+                [index + 1] == 60) {
                     currentBuilder.Append ("&lt;");
                     indexTemp2 += 2; break;
                     }
@@ -480,7 +450,7 @@ namespace PeterO.Enriched {
                     if (index < endIndex && ((str [index] >= 48 && str [index]
                     <= 57) || (str [index] == 45) || (str [index] >= 97 && str
                 [index] <= 122) || (str [index] >= 65 && str [index] <=
-                      90))) {
+                    90))) {
                     ++index;
                     } else if (i3 < 1) {
                     index = indexStart3; break;
@@ -495,7 +465,7 @@ namespace PeterO.Enriched {
                     if (index < endIndex && (str [index] == 62)) {
                     ++index;
                     string command = str.Substring (commandStart,
-                    commandEnd - commandStart).ToLowerInvariant ();
+                    commandEnd - commandStart).ToLowerInvariant();
                     if (!withinParam) {
                     if (command.Equals ("bold")) {
                     currentBuilder.Append ('<');
@@ -590,7 +560,7 @@ namespace PeterO.Enriched {
                     if (isEndTag) {
                     withinParam = false;
                     currentBuilder = originalBuilder;
-                    string p = TrimSpaces (paramBuilder.ToString ());
+                    string p = TrimSpaces (paramBuilder.ToString());
                     if (lastCommand.Equals ("fontfamily")) {
                     if (SkipFont (p, 0, p.Length) == p.Length) {
                     currentBuilder.Append ("<span style='font-family:  " + p +
@@ -599,7 +569,7 @@ namespace PeterO.Enriched {
                     currentBuilder.Append ("<span>");
                     }
                     } else if (lastCommand.Equals ("color")) {
-                    p = ParseColor (p.ToLowerInvariant (), 0, p.Length);
+                    p = ParseColor (p.ToLowerInvariant(), 0, p.Length);
                     if (p != null) {
                     currentBuilder.Append ("<span style='color: " + p + "'>");
                     } else {
@@ -613,13 +583,13 @@ namespace PeterO.Enriched {
                     currentBuilder.Append ("<span>");
                     }
                     } else if (lastCommand.Equals ("paraindent")) {
-                    p = p.ToLowerInvariant ();
+                    p = p.ToLowerInvariant();
                     string [] pList = SplitAt (p, ",");
                     var leftFlag = false;
                     var rightFlag = false;
                     var inFlag = false;
                     var outFlag = false;
-                    var styleBuilder = new StringBuilder ();
+                    var styleBuilder = new StringBuilder();
                     foreach (string pItem in pList) {
                     string pItem2 = TrimSpaces (pItem);
                     if (!leftFlag && pItem2.Equals ("left")) {
@@ -638,8 +608,7 @@ namespace PeterO.Enriched {
                     styleBuilder.Append ("padding-bottom: 0;");
                     }
                  currentBuilder.Append ("<div style=' " +
-                      styleBuilder.ToString
-                    () + "'> ");
+                styleBuilder.ToString () + "'> ");
                     }
                     lastCommand = String.Empty;
                     } else {
@@ -718,11 +687,9 @@ namespace PeterO.Enriched {
                     break;
                     }
                 if (index < endIndex && ((str [index] >= 0 && str [index] <=
-                      9)
-                    ||
-              (str [index] >= 11 && str [index] <= 12) || (str [index] >= 14
-                      &&
-                    str [index] <= 127))) {
+                9) ||
+              (str [index] >= 11 && str [index] <= 12) || (str [index] >= 14&&
+                str [index] <= 127))) {
                     // Ordinary character
                     if (str [index] == 0) {
                     // Null
@@ -738,7 +705,7 @@ namespace PeterO.Enriched {
                     do {
                     if (index < endIndex && ((str [index] >= 128 && str [index]
                 <= 55295) || (str [index] >= 57344 && str [index] <=
-                      65535))) {
+                    65535))) {
                     // BMP character
                     currentBuilder.Append (str [index]);
                     ++indexTemp3; break;
@@ -770,7 +737,7 @@ namespace PeterO.Enriched {
                 }
             } while (false);
             originalBuilder.Append ("</body></html>");
-            return originalBuilder.ToString ();
+            return originalBuilder.ToString();
         }
     }
 }
