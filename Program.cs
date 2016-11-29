@@ -12,13 +12,18 @@ using PeterO.Enriched;
 using PeterO.Text;
 
 namespace Enriched {
-    class Program {
+    internal class Program {
+    /// <summary>Not documented yet.</summary>
+    /// <param name='filename'>Not documented yet.</param>
+    /// <returns>A string object.</returns>
         public static string ReadTextFromFile (string filename) {
             using (var stream = new FileStream (filename, FileMode.Open)) {
                 return new CharacterReader (stream, 2).InputToString();
             }
         }
 
+    /// <summary>Not documented yet.</summary>
+    /// <param name='args'>Not documented yet.</param>
         public static void Main (string [] args) {
             if (args.Length < 2) {
              Console.WriteLine
