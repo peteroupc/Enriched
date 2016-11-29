@@ -9,6 +9,7 @@
 *.suo
 *.userprefs
 .classpath
+.nuget/
 .pmd
 .project
 .settings/
@@ -19,3 +20,4 @@ bin/
 js/*.ht*
 js/DecTest.*
 obj/
+packages/

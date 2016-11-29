@@ -12,6 +12,7 @@ using PeterO.Enriched;
 using PeterO.Text;
 
 namespace Enriched {
+    /// <summary>Not documented yet.</summary>
     internal class Program {
     /// <summary>Not documented yet.</summary>
     /// <param name='filename'>Not documented yet.</param>
