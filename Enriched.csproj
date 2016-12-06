@@ -40,8 +40,8 @@
     <Reference Include="System.Xml.Linq">
     </Reference>
     <Reference Include="Encoding">
-      <HintPath>packages\PeterO.Encoding.0.1.0\lib\portable-net40+sl50+win+wpa81+wp8\Encoding.dll</HintPath>
-      <HintPath>packages\PeterO.Encoding.0.1.0\lib\portable-net40+sl50+win+wpa81+wp8\Encoding.dll</HintPath>
+      <HintPath>packages\PeterO.Encoding.0.2.0\lib\portable-net45+dnxcore50+netcore45+win+wpa81+wp80\Encoding.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -49,13 +49,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="EnrichedText\EnrichedText.csproj">
       <Project>{E943127A-F8A6-4885-BC52-AE16AA61A7CA}</Project>
       <Name>EnrichedText</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

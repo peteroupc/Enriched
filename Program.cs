@@ -17,18 +17,17 @@ namespace Enriched {
     /// <summary>Not documented yet.</summary>
     /// <param name='filename'>Not documented yet.</param>
     /// <returns>A string object.</returns>
-        public static string ReadTextFromFile (string filename) {
-            using (var stream = new FileStream (filename, FileMode.Open)) {
-                return new CharacterReader (stream, 2).InputToString();
+        public static string ReadTextFromFile(string filename) {
+             using (var stream = new FileStream(filename, FileMode.Open)) {
+                return new CharacterReader(stream, 2).InputToString();
             }
         }
 
     /// <summary>Not documented yet.</summary>
     /// <param name='args'>Not documented yet.</param>
-        public static void Main (string [] args) {
+        public static void Main(string[] args) {
             if (args.Length < 2) {
-             Console.WriteLine
-                  ("Usage: Enriched <input-enriched-text-file> " +
+             Console.WriteLine("Usage: Enriched <input-enriched-text-file> " +
                     "<output-html-file>" + Environment.NewLine +
   "Supports files encoded in UTF-8, UTF-16, or UTF-32. Files" +
                     Environment.NewLine +
@@ -36,15 +35,15 @@ namespace Enriched {
                     Environment.NewLine + "mark at the beginning.");
                 return;
             }
-            string input = args [0];
-            string output = args [1];
-            if (!File.Exists (input)) {
-                Console.WriteLine ("File not found: " + input);
+            string input = args[0];
+            string output = args[1];
+            if (!File.Exists(input)) {
+                Console.WriteLine("File not found: " + input);
                 return;
             }
-            string text = ReadTextFromFile (input);
-            text = EnrichedText.EnrichedToHtml (text, 0, text.Length);
-            File.WriteAllText (output, text);
+            string text = ReadTextFromFile(input);
+            text = EnrichedText.EnrichedToHtml(text, 0, text.Length);
+            File.WriteAllText(output, text);
         }
     }
 }
