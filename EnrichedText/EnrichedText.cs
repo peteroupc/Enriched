@@ -1,15 +1,17 @@
 using System;
-
-using System.Text;
 using System.Collections.Generic;
+using System.Text;
 
 namespace PeterO.Enriched {
     /// <summary>Not documented yet.</summary>
     public static class EnrichedText {
     /// <summary>Not documented yet.</summary>
-    /// <param name='str'>Not documented yet.</param>
-    /// <param name='index'>Not documented yet.</param>
-    /// <param name='endIndex'>Not documented yet. (3).</param>
+    /// <param name='str'>The parameter <paramref name='str'/> is not
+    /// documented yet.</param>
+    /// <param name='index'>The parameter <paramref name='index'/> is not
+    /// documented yet.</param>
+    /// <param name='endIndex'>The parameter <paramref name='endIndex'/> is
+    /// not documented yet.</param>
     /// <returns>A string object.</returns>
         private static string ParseColor(string str, int index, int endIndex) {
 if (index + 2 == endIndex - 1 && (str[index] & ~32) == 82 && (str[index + 1] & ~32) == 69 && (str[index + 2] & ~32) == 68) {
@@ -121,9 +123,12 @@ if (index + 4 == endIndex - 1 && (str[index] == 44) && (((str[index + 1] >=
         }
 
     /// <summary>Not documented yet.</summary>
-    /// <param name='str'>Not documented yet.</param>
-    /// <param name='index'>Not documented yet.</param>
-    /// <param name='endIndex'>Not documented yet. (3).</param>
+    /// <param name='str'>The parameter <paramref name='str'/> is not
+    /// documented yet.</param>
+    /// <param name='index'>The parameter <paramref name='index'/> is not
+    /// documented yet.</param>
+    /// <param name='endIndex'>The parameter <paramref name='endIndex'/> is
+    /// not documented yet.</param>
     /// <returns>A 32-bit signed integer.</returns>
         private static int SkipFont(string str, int index, int endIndex) {
             int indexTemp = index;
@@ -168,9 +173,12 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
         }
 
     /// <summary>Not documented yet.</summary>
-    /// <param name='str'>Not documented yet.</param>
-    /// <param name='index'>Not documented yet.</param>
-    /// <param name='endIndex'>Not documented yet. (3).</param>
+    /// <param name='str'>The parameter <paramref name='str'/> is not
+    /// documented yet.</param>
+    /// <param name='index'>The parameter <paramref name='index'/> is not
+    /// documented yet.</param>
+    /// <param name='endIndex'>The parameter <paramref name='endIndex'/> is
+    /// not documented yet.</param>
     /// <returns>A 32-bit signed integer.</returns>
         private static int SkipLang(string str, int index, int endIndex) {
             while (index < endIndex && ((str[index] >= 48 && str[index] <= 57)
@@ -183,8 +191,10 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
         }
 
     /// <summary>Not documented yet.</summary>
-    /// <param name='s'>Not documented yet.</param>
-    /// <param name='delimiter'>Not documented yet.</param>
+    /// <param name='s'>The parameter <paramref name='s'/> is not
+    /// documented yet.</param>
+    /// <param name='delimiter'>The parameter <paramref name='delimiter'/>
+    /// is not documented yet.</param>
     /// <returns>A string[] object.</returns>
         private static string[] SplitAt(string s, string delimiter) {
             if (delimiter == null || delimiter.Length == 0) {
@@ -213,7 +223,7 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
                     strings = new List<string>();
                     first = false;
                     }
-                    string newstr = s.Substring(index, (index2) - index);
+                    string newstr = s.Substring(index, index2 - index);
                     strings.Add(newstr);
                     index = index2 + delimLength;
                 }
@@ -222,7 +232,8 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
         }
 
     /// <summary>Not documented yet.</summary>
-    /// <param name='s'>Not documented yet.</param>
+    /// <param name='s'>The parameter <paramref name='s'/> is not
+    /// documented yet.</param>
     /// <returns>A string object.</returns>
         private static string TrimSpaces(string s) {
             if (s == null || s.Length == 0) {
@@ -255,9 +266,12 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
         }
 
     /// <summary>Not documented yet.</summary>
-    /// <param name='str'>Not documented yet.</param>
-    /// <param name='index'>Not documented yet.</param>
-    /// <param name='endIndex'>Not documented yet. (3).</param>
+    /// <param name='str'>The parameter <paramref name='str'/> is not
+    /// documented yet.</param>
+    /// <param name='index'>The parameter <paramref name='index'/> is not
+    /// documented yet.</param>
+    /// <param name='endIndex'>The parameter <paramref name='endIndex'/> is
+    /// not documented yet.</param>
     /// <returns>A string object.</returns>
         public static string EnrichedToPlain(
   string str,
@@ -340,7 +354,7 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
                     }
                     int indexStart2 = index;
                     var lineBreakCount = 0;
-                    for (int i2 = 0; ; ++i2) {
+                    for (int i2 = 0;; ++i2) {
                     indexTemp3 = index;
                     do {
          if (index + 1 < endIndex && str[index] == 13 && str[index + 1] == 10) {
@@ -439,9 +453,12 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
         }
 
     /// <summary>Not documented yet.</summary>
-    /// <param name='str'>Not documented yet.</param>
-    /// <param name='index'>Not documented yet.</param>
-    /// <param name='endIndex'>Not documented yet. (3).</param>
+    /// <param name='str'>The parameter <paramref name='str'/> is not
+    /// documented yet.</param>
+    /// <param name='index'>The parameter <paramref name='index'/> is not
+    /// documented yet.</param>
+    /// <param name='endIndex'>The parameter <paramref name='endIndex'/> is
+    /// not documented yet.</param>
     /// <returns>A string object.</returns>
         public static string EnrichedToHtml(
   string str,
@@ -611,8 +628,8 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
                     }
                     } else if (lastCommand.Equals("lang")) {
                     if (SkipLang(p, 0, p.Length) == p.Length) {
-                currentBuilder.Append("<span lang=' " + p.ToLowerInvariant(
-  ) + "'> ");
+                currentBuilder.Append("<span lang=' " + p.ToLowerInvariant() +
+   "'> ");
                     } else {
                     currentBuilder.Append("<span>");
                     }
@@ -670,7 +687,7 @@ str[index] <= 56319) && (str[index + 1] >= 56320 && str[index + 1] <= 57343))) {
                     }
                     int indexStart2 = index;
                     var lineBreakCount = 0;
-                    for (int i2 = 0; ; ++i2) {
+                    for (int i2 = 0;; ++i2) {
                     indexTemp3 = index;
                     do {
          if (index + 1 < endIndex && str[index] == 13 && str[index + 1] == 10) {

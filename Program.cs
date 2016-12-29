@@ -15,7 +15,8 @@ namespace Enriched {
     /// <summary>Not documented yet.</summary>
     internal class Program {
     /// <summary>Not documented yet.</summary>
-    /// <param name='filename'>Not documented yet.</param>
+    /// <param name='filename'>The parameter <paramref name='filename'/> is
+    /// not documented yet.</param>
     /// <returns>A string object.</returns>
         public static string ReadTextFromFile(string filename) {
              using (var stream = new FileStream(filename, FileMode.Open)) {
@@ -24,7 +25,8 @@ namespace Enriched {
         }
 
     /// <summary>Not documented yet.</summary>
-    /// <param name='args'>Not documented yet.</param>
+    /// <param name='args'>The parameter <paramref name='args'/> is not
+    /// documented yet.</param>
         public static void Main(string[] args) {
             if (args.Length < 2) {
              Console.WriteLine("Usage: Enriched <input-enriched-text-file> " +

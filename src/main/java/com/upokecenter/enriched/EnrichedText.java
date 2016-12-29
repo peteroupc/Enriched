@@ -10,9 +10,9 @@ private EnrichedText() {
 }
     /**
      * Not documented yet.
-     * @param str Not documented yet.
-     * @param index Not documented yet.
-     * @param endIndex Not documented yet. (3).
+     * @param str The parameter {@code str} is not documented yet.
+     * @param index The parameter {@code index} is not documented yet.
+     * @param endIndex The parameter {@code endIndex} is not documented yet.
      * @return A string object.
      */
         private static String ParseColor(String str, int index, int endIndex) {
@@ -126,9 +126,9 @@ if (index + 4 == endIndex - 1 && (str.charAt(index) == 44) && (((str.charAt(inde
 
     /**
      * Not documented yet.
-     * @param str Not documented yet.
-     * @param index Not documented yet.
-     * @param endIndex Not documented yet. (3).
+     * @param str The parameter {@code str} is not documented yet.
+     * @param index The parameter {@code index} is not documented yet.
+     * @param endIndex The parameter {@code endIndex} is not documented yet.
      * @return A 32-bit signed integer.
      */
         private static int SkipFont(String str, int index, int endIndex) {
@@ -175,9 +175,9 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
 
     /**
      * Not documented yet.
-     * @param str Not documented yet.
-     * @param index Not documented yet.
-     * @param endIndex Not documented yet. (3).
+     * @param str The parameter {@code str} is not documented yet.
+     * @param index The parameter {@code index} is not documented yet.
+     * @param endIndex The parameter {@code endIndex} is not documented yet.
      * @return A 32-bit signed integer.
      */
         private static int SkipLang(String str, int index, int endIndex) {
@@ -192,8 +192,8 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
 
     /**
      * Not documented yet.
-     * @param s Not documented yet.
-     * @param delimiter Not documented yet.
+     * @param s The parameter {@code s} is not documented yet.
+     * @param delimiter The parameter {@code delimiter} is not documented yet.
      * @return A string[] object.
      */
         private static String[] SplitAt(String s, String delimiter) {
@@ -221,7 +221,7 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
                     strings = new ArrayList<String>();
                     first = false;
                     }
-                    String newstr = s.substring(index, (index)+((index2) - index));
+                    String newstr = s.substring(index, (index)+(index2 - index));
                     strings.add(newstr);
                     index = index2 + delimLength;
                 }
@@ -231,7 +231,7 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
 
     /**
      * Not documented yet.
-     * @param s Not documented yet.
+     * @param s The parameter {@code s} is not documented yet.
      * @return A string object.
      */
         private static String TrimSpaces(String s) {
@@ -266,9 +266,9 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
 
     /**
      * Not documented yet.
-     * @param str Not documented yet.
-     * @param index Not documented yet.
-     * @param endIndex Not documented yet. (3).
+     * @param str The parameter {@code str} is not documented yet.
+     * @param index The parameter {@code index} is not documented yet.
+     * @param endIndex The parameter {@code endIndex} is not documented yet.
      * @return A string object.
      */
         public static String EnrichedToPlain(
@@ -352,7 +352,7 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
                     }
                     int indexStart2 = index;
                     int lineBreakCount = 0;
-                    for (int i2 = 0; ; ++i2) {
+                    for (int i2 = 0;; ++i2) {
                     indexTemp3 = index;
                     do {
          if (index + 1 < endIndex && str.charAt(index) == 13 && str.charAt(index + 1) == 10) {
@@ -452,9 +452,9 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
 
     /**
      * Not documented yet.
-     * @param str Not documented yet.
-     * @param index Not documented yet.
-     * @param endIndex Not documented yet. (3).
+     * @param str The parameter {@code str} is not documented yet.
+     * @param index The parameter {@code index} is not documented yet.
+     * @param endIndex The parameter {@code endIndex} is not documented yet.
      * @return A string object.
      */
         public static String EnrichedToHtml(
@@ -625,8 +625,8 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
                     }
                     } else if (lastCommand.equals("lang")) {
                     if (SkipLang(p, 0, p.length()) == p.length()) {
-                currentBuilder.append("<span lang=' " + p.toLowerCase(
-) + "'> ");
+                currentBuilder.append("<span lang=' " + p.toLowerCase() +
+   "'> ");
                     } else {
                     currentBuilder.append("<span>");
                     }
@@ -684,7 +684,7 @@ str.charAt(index) <= 56319) && (str.charAt(index + 1) >= 56320 && str.charAt(ind
                     }
                     int indexStart2 = index;
                     int lineBreakCount = 0;
-                    for (int i2 = 0; ; ++i2) {
+                    for (int i2 = 0;; ++i2) {
                     indexTemp3 = index;
                     do {
          if (index + 1 < endIndex && str.charAt(index) == 13 && str.charAt(index + 1) == 10) {
