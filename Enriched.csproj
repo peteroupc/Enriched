@@ -5,7 +5,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Enriched</RootNamespace>
+    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+<RootNamespace>Enriched</RootNamespace>
     <AssemblyName>Enriched</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>

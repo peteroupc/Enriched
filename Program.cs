@@ -7,7 +7,6 @@ at: http://peteroupc.github.io/
  */
 using System;
 using System.IO;
-
 using PeterO.Enriched;
 using PeterO.Text;
 
